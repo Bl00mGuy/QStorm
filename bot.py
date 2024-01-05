@@ -134,5 +134,14 @@ def week(message):
 
     bot.send_message(message.chat.id, forecast_text, parse_mode='HTML')
 
+@bot.message_handler(commands=['clear'])
+def clear(message):
+    user_id = message.from_user.id
+    if user_id in user_preferences:
+        del user_preferences[user_id]
+        bot.send_message(message.chat.id, "Данные пользователя удалены.")
+    else:
+        bot.send_message(message.chat.id, "Данные пользователя не найдены.")
+
 if __name__ == '__main__':
     bot.polling(none_stop=True)
