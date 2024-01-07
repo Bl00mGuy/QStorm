@@ -2,11 +2,11 @@ import requests
 import telebot
 from datetime import datetime, timedelta
 
-API_KEY = '968bd40fade1ca5783544519771a8399'
+API_KEY = 'api-key was hidden'
 BASE_URL = 'http://api.openweathermap.org/data/2.5/weather'
 FORECAST_URL = 'http://api.openweathermap.org/data/2.5/forecast'
 
-bot = telebot.TeleBot("6857480274:AAGIVxzMCrZcfrHRwE29FCGq9Z6LGEYpWjE")
+bot = telebot.TeleBot("bot-key was hidden")
 
 user_preferences = {}
 
